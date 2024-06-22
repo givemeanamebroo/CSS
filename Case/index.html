@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            font-family: "Cera Pro", sans-serif;
+            font-weight: 500;
+            padding: 0px;
+        }
+
+        .header .inner-header {
+            height: 55px;
+            background-color: #f8f8f8;
+        }
+        .header .inner-header .header-button {
+            width: 500px;
+        }
+        .header .inner-header .header-button .inner-header-button {
+            box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.75);
+            font-size: 12px;
+            line-height: 25px;
+            margin-left: 30px;
+            height: 25px;
+            background-color: #abd9ff;
+        }
+        .header .inner-header .header-button .inner-header-button:hover {
+            background-color: transparent;
+            transition: 1s;
+        }
+        .header .inner-header .header-main .inner-header-main a {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #006db7;
+        }
+        .header .inner-header .header-sign-in {
+            width: 500px;
+        }
+        .header .inner-header .header-sign-in .inner-join-logo {
+            border-right: 1px solid black;
+        }
+        .header .inner-header .header-sign-in .inner-join-logo a {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .header .inner-header .header-sign-in .inner-join a {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .header .inner-navbar {
+            height: 75px;
+            background-color: #ffcf00;
+        }
+        .header .inner-navbar .nav-bar-logo {
+            width: 440px;
+            height: 100%;
+        }
+        .header .inner-navbar .nav-bar-logo .inner-nav-bar-logo {
+            height: 100%;
+            width: 440px;
+        }
+        .header .inner-navbar .nav-bar-logo .inner-nav-bar-logo a {
+            background-color: transparent;
+            border: none;
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .header .inner-navbar .nav-bar-logo .inner-nav-bar-logo a img {
+            width: 55px;
+            height: 55px;
+        }
+        .header .inner-navbar .nav-bar-logo .inner-nav-bar-logo a:hover {
+            text-decoration: underline;
+        }
+        .header .inner-navbar .nav-bar-search {
+            width: 245px;
+        }
+        .header .inner-navbar .nav-bar-search .list-group-search a:first-child {
+            border-radius: 50%;
+            background-color: white;
+            height: 40px;
+            width: 40px;
+        }
+        .header .inner-navbar .nav-bar-search .list-group-search a:last-child small {
+            position: absolute;
+            left: 40px;
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .header .inner-navbar .nav-bar-search .list-group-search a {
+            background-color: transparent;
+            border: none;
+        }
+        .header .inner-navbar .nav-bar-search .list-group-search a:hover {
+            text-decoration: none;
+        }
+
+        .home .home-poster {
+            height: 475px;
+        }
+        .home .home-poster a img {
+            height: 100%;
+            width: 100%;
+        }
+        .home .home-poster .home-logo {
+            position: absolute;
+            height: 50px;
+            width: 150px;
+            bottom: 20px;
+            right: 20px;
+        }
+        .home .home-poster .home-logo img {
+            width: 100%;
+            height: 100%;
+        }
+        .home .home-poster .home-box {
+            position: absolute;
+            bottom: 150px;
+            left: 110px;
+        }
+        .home .home-poster .home-box b {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 50px;
+        }
+        .home .home-poster .home-box p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+        .home .home-poster .home-box a {
+            font-size: 12px;
+            line-height: 25px;
+            margin-left: 30px;
+            height: 25px;
+            font-size: 16px;
+            padding: 16px;
+            background-color: black;
+            margin-left: 0px;
+            margin-right: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+        }
+        .home .home-poster .home-box a i {
+            margin-left: 15px;
+        }
+        .home .home-poster .home-box a:hover {
+            background-color: transparent;
+            transition: 1s;
+            color: black;
+        }
+        .home .home-poster .home-box a:hover .fa-chevron-right {
+            color: black !important;
+            transition: 1s;
+        }
+        .home .home-navbar {
+            height: 170px;
+            padding-top: 20px;
+        }
+        .home .home-navbar .inner-home-navbar {
+            width: 1100px;
+            height: 100%;
+        }
+        .home .home-navbar .inner-home-navbar .home-card {
+            width: 120px;
+            height: 100%;
+            border: none;
+        }
+        .home .home-navbar .inner-home-navbar .home-card a {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .home .home-navbar .inner-home-navbar .home-card a:hover {
+            text-decoration: underline;
+        }
+
+        .content-first .inner-content-first .content-first-top {
+            height: 575px;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first {
+            width: 1280px;
+            height: 100%;
+            padding-top: 70px;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-title {
+            font-size: 32px;
+            line-height: 43px;
+            padding-bottom: 30px;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box {
+            width: 100%;
+            height: 430px;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .first-top-items,
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .second-top-items {
+            width: 410px;
+            height: 100%;
+            border: none;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .first-top-items p,
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .second-top-items p {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .first-top-items h5,
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .second-top-items h5 {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 31px;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .first-top-items a,
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .second-top-items a {
+            color: black;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .first-top-items a i,
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .second-top-items a i {
+            margin-left: 5px;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .first-top-items:hover a,
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .second-top-items:hover a {
+            text-decoration: underline;
+        }
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .first-top-items:hover i,
+        .content-first .inner-content-first .content-first-top .inner-top-first .first-top-box .second-top-items:hover i {
+            transform: translateX(5px);
+            transition: transform 1s;
+        }
+        .content-first .inner-content-first .content-first-bottom {
+            height: 636px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first {
+            height: 100%;
+            width: 1275px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-title {
+            font-size: 32px;
+            line-height: 43px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items {
+            width: 290px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items button {
+            background-color: transparent;
+            border: none;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items button .picture-modal {
+            border-radius: 50%;
+            left: 20px;
+            top: 10px;
+            width: 25px;
+            height: 25px;
+            background-color: #e2222f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .modal {
+            background-color: rgba(127, 115, 114, 0.1);
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .modal .modal-dialog .modal-content {
+            background-color: white;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .modal .modal-dialog .modal-content .modal-body .container-fluid div img {
+            width: 70px;
+            height: 70px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .modal .modal-dialog .modal-content .modal-body .container-fluid div span {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .modal .modal-dialog .modal-content .modal-body .container-fluid div span a {
+            text-decoration: none;
+            color: #006db7;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .modal .modal-dialog .modal-content .modal-body .container-fluid button {
+            height: 55px;
+            width: 470px;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #006db7;
+            background-color: #006db7;
+            color: #f8f8f8;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .modal .modal-dialog .modal-content .modal-body .container-fluid button:hover {
+            background-color: transparent;
+            color: black;
+            transition: 1s;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-img {
+            height: 290px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-img img {
+            width: 90%;
+            height: 70%;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-img .items-badge {
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-img:hover img {
+            transform: scaleY(1.2) scaleX(1.1);
+            transition: transform 1s;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items div {
+            background-color: transparent;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items div a {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items div a:hover {
+            text-decoration: underline;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-tag button {
+            width: 250px;
+            height: 60px;
+            background-color: #e2222f;
+            border-radius: 5px;
+            border: 1px solid #e2222f;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-tag button span {
+            color: #f8f8f8;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-tag button:hover {
+            background-color: transparent;
+            transition: 1s linear;
+        }
+        .content-first .inner-content-first .content-first-bottom .inner-bottom-first .first-bottom-box .first-bottom-items .item-tag button:hover span {
+            color: black;
+        }
+
+        .content-card .inner-content-card {
+            width: 1250px;
+            border-radius: 5px;
+            padding: 20px;
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+            font-size: 14px;
+            background-color: #f2f2f2;
+            border: none;
+        }
+
+        .footer {
+            background-color: #201d48;
+            padding-top: 50px;
+        }
+        .footer .inner-footer {
+            width: 1245px;
+            border: 1px solid black;
+            border: none;
+        }
+        .footer .inner-footer .footer-menu {
+            width: 200px;
+        }
+        .footer .inner-footer .footer-menu li {
+            font-weight: 800;
+        }
+        .footer .inner-footer .footer-menu a:hover {
+            text-decoration: underline;
+        }
+        .footer .inner-footer .footer-menu .footer-menu-items {
+            padding-left: 0px;
+            border: none;
+            background-color: transparent;
+            color: white;
+        }
+        .footer .inner-footer .footer-menu .footer-menu-items img {
+            height: 90px;
+            width: 90px;
+        }
+        .footer .inner-footer .footer-menu .footer-menu-items button {
+            width: 140px;
+            height: 40px;
+            background-color: #18152d;
+            border: none;
+        }
+        .footer .inner-footer .footer-menu .footer-menu-items button span {
+            color: white;
+            padding-left: 10px;
+        }
+        .footer .inner-footer .footer-menu .footer-menu-items .modal-toggle {
+            border: none;
+        }
+        .footer .inner-footer .footer-menu .footer-menu-items .modal-toggle .modal-dialog {
+            height: 100vh;
+            margin: 0px;
+        }
+        .footer .footer-navbar {
+            width: 1245px;
+            margin-top: 70px;
+        }
+        .footer .footer-navbar .list-group .list-group-item {
+            border: none;
+            color: white;
+            background-color: transparent;
+        }
+        .footer .footer-navbar .list-group .list-group-item .input-group input {
+            border: none;
+            outline: none;
+            padding-left: 15px;
+        }
+        .footer .footer-navbar .list-group .list-group-item .input-group button {
+            background-color: #fd8024;
+            width: 50px;
+            height: 55px;
+            border: none;
+        }
+        .footer .footer-navbar .list-group .list-group-item .list-group-horizontal {
+            width: 215px;
+        }
+        .footer .footer-navbar .list-group .list-group-item .list-group-horizontal .link-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121029;
+        }
+        .footer .footer-navbar .list-group .list-group-item .list-group-horizontal .link-icon:hover {
+            text-decoration: none;
+        }
+        .footer .footer-footer {
+            margin-top: 40px;
+        }
+        .footer .footer-footer .inner-footer-footer .footer-nav-bar {
+            height: 50px;
+            width: 1245px;
+        }
+        .footer .footer-footer .inner-footer-footer .footer-nav-bar .footer-inner-nav-bar a {
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+        .footer .footer-footer .inner-footer-footer .footer-nav-bar .footer-inner-nav-bar a:hover {
+            text-decoration: underline;
+        }
+        .footer .footer-footer .inner-footer-footer .footer-description {
+            margin-top: 10px;
+        }
+        .footer .footer-footer .inner-footer-footer .footer-description .inner-footer-description {
+            width: 1245px;
+        }
+        .footer .footer-footer .inner-footer-footer .footer-description .inner-footer-description p {
+            color: white !important;
+            text-decoration: none;
+            color: black;
+            line-height: 19px;
+            font-size: 12px;
+            font-weight: 400;
+        }/*# sourceMappingURL=index.css.map */
+
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="header ">
+        <div class="inner-header row d-flex">
+            <div class="header-button d-flex align-items-center">
+                <div class="btn inner-header-button d-flex align-items-center">
+                    <i class="fa-solid fa-arrow-left-long px-1" style="color: #000000;"></i>
+                    PLAY ZONE
+                </div>
+            </div>
+            <div class="header-main flex-grow-1 d-flex justify-content-between align-items-center">
+                <i class="fa-solid fa-chevron-left fa-xl" style="color: #000000;"></i>
+                <div class="inner-header-main d-flex align-items-center">
+                    <span class="mx-2">Get a Year of the Dragon gift, 1/20-1/31*</span><a href="#"
+                                                                                          class="mx-2">Learn more</a>
+                </div>
+                <i class="fa-solid fa-chevron-right fa-xl" style="color: #000000;"></i>
+            </div>
+            <div class="header-sign-in d-flex align-items-center justify-content-end">
+                <div class="inner-sign-in d-flex px-4">
+                    <div class="inner-join-logo px-2"><a href="#">Sign In</a></div>
+                    <div class="inner-join px-2"><a href="#">Join LEGO® Insiders</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header sticky-top">
+        <div class="inner-navbar row d-flex justify-content-between">
+            <div class="nav-bar-logo">
+                <ul
+                        class="list-group list-group-horizontal inner-nav-bar-logo d-flex align-items-center justify-content-between">
+                    <a href="#" class="list-group-item"><img
+                            src="https://assets.lego.com/logos/v4.5.0/brand-lego.svg" alt=""></a>
+                    <a href="#" class="list-group-item">SHOP</a>
+                    <a href="#" class="list-group-item">DISCOVER</a>
+                    <a href="#" class="list-group-item">HELP</a>
+                </ul>
+            </div>
+            <div class="nav-bar-search d-flex align-items-center justify-content-center">
+                <ul
+                        class="list-group list-group-horizontal list-group-search d-flex align-items-center justify-content-center">
+                    <a href="#" class="list-group-item d-flex align-items-center justify-content-center"><i
+                            class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a>
+                    <a href="#" class="list-group-item"><i class="fa-regular fa-heart fa-lg"
+                                                           style="color: #000000;"></i></a>
+                    <a href="#" class="list-group-item position-relative"><i class="fa-solid fa-bag-shopping fa-lg"
+                                                                             style="color: #000000;"></i><small>(4)</small></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-content"> <div class="home">
+        <div class="home-poster row position-relative">
+            <a href="#"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/blt6cc32409e674d283/1944-Contingency-202402-Hero-10329-Standard-Large.jpg?fit=crop&format=webply&quality=80&width=1600&height=500&dpr=1.5"
+                    alt=""></a>
+            <a href="#" class="home-logo"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/bltdb8d448dcc06cf2b/icons-logo-neg-600w.png?format=png&height=60&dpr=1.5"
+                    alt=""></a>
+            <span class="home-box">
+                <b>Bring someone closer</b>
+                <p class="py-3">Celebrate Valentine's Day with a gift that's perfect for sharing.</p>
+                <a href="#" role="button" class="px-auto">Shop now<i class="fa-solid fa-chevron-right fa-lg"
+                                                                     style="color: #ffffff;"></i></a>
+                <a href="#" role="button">Learn more<i class="fa-solid fa-chevron-right fa-lg"
+                                                       style="color: #ffffff;"></i></a>
+            </span>
+        </div>
+        <div class="home-navbar row d-flex justify-content-center">
+            <div class="inner-home-navbar d-flex justify-content-between">
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blta6e69aaa6a8814f9/Jan-Feb-DrivePeriod-Home-202401-Quicklink-New.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link">New</a>
+                    </div>
+                </div>
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltea57974da2e170ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Exclusive.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link">Exclusives</a>
+                    </div>
+                </div>
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blte02a20b2427c36ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Offer.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link">Offers</a>
+                    </div>
+                </div>
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltb2df2fa303d1c506/SpringFest-Page-202401-Quicklink.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link row">Spring Festival</a>
+                    </div>
+                </div>
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltcf9c1f5eb67b9e1e/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Flowers.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link">LEGO® Icons</a>
+                    </div>
+                </div>
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blte5174160ca41e890/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Disney.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link">Disney</a>
+                    </div>
+                </div>
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltab23621458a84677/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Marvel.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link">Marvel</a>
+                    </div>
+                </div>
+                <div class="card home-card">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt0b3aedf4c1a73232/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Insiders.png?format=webply&fit=crop&quality=70&width=120&height=97&dpr=1.5"
+                         alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="#" class="stretched-link row">LEGO® Insiders</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="content-first">
+            <div class="inner-content-first">
+                <div class="content-first-top d-flex justify-content-center">
+                    <div class="inner-top-first">
+                        <div class="first-top-title">This week's top picks</div>
+                        <div class="first-top-box d-flex justify-content-between">
+                            <div class="card first-top-items">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/bltc3cc0ed8eddda98b/75372-HT-202401-PS-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Get set for an epic galatic battle</h5>
+                                    <p class="card-text row">Recreate thrilling scenes with new LEGO® Star Wars™ sets.
+                                    </p>
+                                    <a href="#" class="card-link stretched-link">Shop now<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card first-top-items">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt6c9b17cd0c45f74f/21345-HS-202401-PS-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Put your creativity into focus</h5>
+                                    <p class="card-text row text-center">New LEGO® Ideas Polaroid OneStep SX-70 Camera
+                                        set captures its iconic design. </p>
+                                    <a href="#" class="card-link stretched-link">Shop now<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card first-top-items">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt91e52da4d88114fb/10326-Mammoth-202312-Exclusive-PS-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Natural History Museum</h5>
+                                    <p class="card-text">Make history with this cool Modular Buildings set.</p>
+                                    <a href="#" class="card-link stretched-link ">Shop now<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-first-bottom row d-flex justify-content-center mt-5">
+                    <div class="inner-bottom-first">
+                        <div class="first-bottom-title">Featured Sets</div>
+                        <div class="first-bottom-box d-flex justify-content-between">
+                            <div class="card first-bottom-items">
+                                <!-- Button trigger modal -->
+                                <button class=" d-flex justify-content-starts" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                <span> <i class=" picture-modal fa-regular fa-heart mx-2 my-2"
+                                          style="color: #2c85c2;"></i></span>
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <h4 class="modal-title" id="exampleModalLabel">My account</h4>
+                                                    </div>
+                                                    <div class="row d-flex align-items-center"><img
+                                                            src="https://assets.lego.com/logos/v4.5.0/brand-lego.svg"
+                                                            alt="">
+                                                        <span class="ml-3">Sign In To Your LEGO® Account</span>
+                                                    </div>
+                                                    <div class="row mt-3"><button
+                                                            class="d-flex align-items-center justify-content-center"
+                                                            type="button"><span>Sign In</span></button></div>
+                                                    <div class="row">
+                                                    <span>To create or access a wish list, please sign in to your LEGO®
+                                                        account</span>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <span>Don't have an account? <a href="#">Register</a> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#"
+                                   class="card-img-top  item-img position-relative d-flex justify-content-center align-items-center">
+                                    <img src="https://www.lego.com/cdn/cs/set/assets/bltf876ca701fbacd4a/40725.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5"
+                                         alt="...">
+                                    <span class="badge badge-warning items-badge">New</span>
+                                </a>
+                                <div><a href="#" class="row" style="margin-left: 20px;">Cherry
+                                    Blossoms</a></div>
+                                <div class="card-body item-tag">
+                                    <div>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                    </div>
+                                    <p>$14.99</p>
+                                    <button><span>Add to Bag</span></button>
+                                </div>
+                            </div>
+                            <div class="card first-bottom-items">
+                                <!-- Button trigger modal -->
+                                <button class=" d-flex justify-content-starts" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                <span> <i class=" picture-modal fa-regular fa-heart mx-2 my-2"
+                                          style="color: #2c85c2;"></i></span>
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <h4 class="modal-title" id="exampleModalLabel">My account</h4>
+                                                    </div>
+                                                    <div class="row d-flex align-items-center"><img
+                                                            src="https://assets.lego.com/logos/v4.5.0/brand-lego.svg"
+                                                            alt="">
+                                                        <span class="ml-3">Sign In To Your LEGO® Account</span>
+                                                    </div>
+                                                    <div class="row mt-3"><button
+                                                            class="d-flex align-items-center justify-content-center"
+                                                            type="button"><span>Sign In</span></button></div>
+                                                    <div class="row">
+                                                    <span>To create or access a wish list, please sign in to your LEGO®
+                                                        account</span>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <span>Don't have an account? <a href="#">Register</a> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#"
+                                   class="card-img-top  item-img position-relative d-flex justify-content-center align-items-center">
+                                    <img src="https://www.lego.com/cdn/cs/set/assets/blt7313b131b122beb4/40678.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5"
+                                         alt="...">
+                                    <span class="badge badge-warning items-badge">New</span>
+                                </a>
+                                <div><a href="#" class="row" style="margin-left: 20px;">Festival Calendar</a></div>
+                                <div class="card-body item-tag">
+                                    <div>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                    </div>
+                                    <p>$29.99</p>
+                                    <button><span>Add to Bag</span></button>
+                                </div>
+                            </div>
+                            <div class="card first-bottom-items">
+                                <!-- Button trigger modal -->
+                                <button class=" d-flex justify-content-starts" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                <span> <i class=" picture-modal fa-regular fa-heart mx-2 my-2"
+                                          style="color: #2c85c2;"></i></span>
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <h4 class="modal-title" id="exampleModalLabel">My account</h4>
+                                                    </div>
+                                                    <div class="row d-flex align-items-center"><img
+                                                            src="https://assets.lego.com/logos/v4.5.0/brand-lego.svg"
+                                                            alt="">
+                                                        <span class="ml-3">Sign In To Your LEGO® Account</span>
+                                                    </div>
+                                                    <div class="row mt-3"><button
+                                                            class="d-flex align-items-center justify-content-center"
+                                                            type="button"><span>Sign In</span></button></div>
+                                                    <div class="row">
+                                                    <span>To create or access a wish list, please sign in to your LEGO®
+                                                        account</span>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <span>Don't have an account? <a href="#">Register</a> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#"
+                                   class="card-img-top  item-img position-relative d-flex justify-content-center align-items-center">
+                                    <img src="https://www.lego.com/cdn/cs/set/assets/bltb2f845ffd52a25b0/10329.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5"
+                                         alt="...">
+                                    <span class="badge badge-warning items-badge">New</span>
+                                </a>
+                                <div><a href="#" class="row" style="margin-left: 20px;">Tiny Plants</a></div>
+                                <div class="card-body item-tag">
+                                    <div>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                                    </div>
+                                    <p>$49.99</p>
+                                    <button><span>Add to Bag</span></button>
+                                </div>
+                            </div>
+                            <div class="card first-bottom-items">
+                                <!-- Button trigger modal -->
+                                <button class=" d-flex justify-content-starts" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                <span> <i class=" picture-modal fa-regular fa-heart mx-2 my-2"
+                                          style="color: #2c85c2;"></i></span>
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <h4 class="modal-title" id="exampleModalLabel">My account</h4>
+                                                    </div>
+                                                    <div class="row d-flex align-items-center"><img
+                                                            src="https://assets.lego.com/logos/v4.5.0/brand-lego.svg"
+                                                            alt="">
+                                                        <span class="ml-3">Sign In To Your LEGO® Account</span>
+                                                    </div>
+                                                    <div class="row mt-3"><button
+                                                            class="d-flex align-items-center justify-content-center"
+                                                            type="button"><span>Sign In</span></button></div>
+                                                    <div class="row">
+                                                    <span>To create or access a wish list, please sign in to your LEGO®
+                                                        account</span>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <span>Don't have an account? <a href="#">Register</a> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#"
+                                   class="card-img-top  item-img position-relative d-flex justify-content-center align-items-center">
+                                    <img src="https://www.lego.com/cdn/cs/set/assets/bltbf7a5d989d3e559f/40673_alt1.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5"
+                                         alt="...">
+                                    <span class="badge badge-warning items-badge">New</span>
+                                </a>
+                                <div><a href="#" class="row" style="margin-left: 20px;">Spring Festival Mickey Mouse</a></div>
+                                <div class="card-body item-tag">
+                                    <div>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                                    </div>
+                                    <p>$9.99</p>
+                                    <button><span>Add to Bag</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home">
+            <div class="home-poster row position-relative">
+                <a href="#"><img
+                        src="https://www.lego.com/cdn/cs/set/assets/blt9d4cd2036e102b36/SpringFest-Page-202401-Hero-Standard-Large-KV3.jpg?fit=crop&format=webply&quality=80&width=1600&height=500&dpr=1.5"
+                        alt=""></a>
+                <span class="home-box">
+                <b>Build long-lasting memories</b>
+                <p class="py-3">Celebrate Spring Festival with the gift of play.</p>
+                <a href="#" role="button" class="px-auto">Shop now<i class="fa-solid fa-chevron-right fa-lg"
+                                                                     style="color: #ffffff;"></i></a>
+                <a href="#" role="button">Learn more<i class="fa-solid fa-chevron-right fa-lg"
+                                                       style="color: #ffffff;"></i></a>
+            </span>
+            </div>
+        </div>
+        <div class="content-first row d-flex justify-content-center"
+             style="background-color: #f5842b; padding-bottom: 60px;">
+            <div class="inner-content-first">
+                <div class="content-first-top d-flex justify-content-center">
+                    <div class="inner-top-first">
+                        <div class="first-top-title">Spring Festival gift ideas</div>
+                        <div class="first-top-box d-flex justify-content-between">
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt3f283530fd4949c9/SpringFest-Page-202401-Block-Standard-80112.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Auspicious Dragon</h5>
+                                    <p class="card-text row text-center">Mark the year of the Dragon with this colorful
+                                        LEGO® set.
+                                    </p>
+                                    <a href="#" class="card-link stretched-link">Shop now<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt2a7f514e5ead62ba/SpringFest-Page-202401-Block-Standard-80113.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Family Celebration Reunion</h5>
+                                    <p class="card-text row text-center">Enjoy a Spring Festival tradition at
+                                        Chinese-style restaurant. </p>
+                                    <a href="#" class="card-link stretched-link">Shop now<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt24bd7f935e0e93af/SpringFest-Page-202401-Block-Standard-31145.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Red Dragon 3in1</h5>
+                                    <p class="card-text row text-center">One set, build a dragon, phoenix or a colorful
+                                        fish.</p>
+                                    <a href="#" class="card-link stretched-link ">Shop now<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt5ce6627550d58078/SpringFest-Page-202401-Block-Standard-40648.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Money Tree</h5>
+                                    <p class="card-text text-center row">Build this tradition New Year gift, adorned
+                                        with riches and rewards.</p>
+                                    <a href="#" class="card-link stretched-link ">Shop now<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-first">
+            <div class="inner-content-first">
+                <div class="content-first-top d-flex justify-content-center">
+                    <div class="inner-top-first">
+                        <div class="first-top-title">Read All About It</div>
+                        <div class="first-top-box d-flex justify-content-between">
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/bltc63a2cca89fdf0a4/01_Article_Hero_Tall_Mobile.png?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Best flowers for Valentine's Day</h5>
+                                    <p class="card-text row text-center">LEGO® flowers and plants make the perfect
+                                        Valentine's Day gift for someone special.Go on, have a browse...</p>
+                                    <a href="#" class="card-link stretched-link">Read more<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt566040a5e8756e44/Hero_tall_mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row text-center">Great souvenirs for London lovers</h5>
+                                    <p class="card-text row text-center">Know someone who holds London close to their
+                                        heart? Look no further. We have a range of LEGO® sets for fans of the bustling
+                                        capital... </p>
+                                    <a href="#" class="card-link stretched-link">Read more<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt22d8bd68647c9bd4/Hero_Banner_-_Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row">Best Learning Toys for Toddlers</h5>
+                                    <p class="card-text row text-center">Our learing toys are specially designed to help
+                                        turn learning time into fun time while helping toddlers to develop key skills
+                                        and express creativity.</p>
+                                    <a href="#" class="card-link stretched-link ">Read more<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                            <div class="card second-top-items" style="width: 310px;">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/bltaa18f7e23a3b295a/HERO_-_Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1.5"
+                                     class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-center flex-wrap">
+                                    <h5 class="card-title row text-center">How to Develop and Nuture Curiosity in Kids
+                                    </h5>
+                                    <p class="card-text text-center row">Learn how you can nuture your kid's curiosity
+                                        and how a curious mind can contribute to a child's health, hapiness and academic
+                                        success </p>
+                                    <a href="#" class="card-link stretched-link ">Read more<i
+                                            class="fa-solid fa-chevron-right" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-card d-flex justify-content-center py-5">
+            <div class="inner-content-card card d-flex align-items-center justify-content-center">
+                <p class="card-text">Welcome to the Official LEGO® Shop, the amazing home of LEGO building toys, <a
+                        href="#">gifts</a>, stunning
+                    display sets and more for <a href="#"> kids</a> and adults alike! Find the perfect gift for
+                    toddlers, teens and adults for
+                    <a href="#">Christmas</a>, <a href="#">birthdays</a> or other occasions. Get a head start on your
+                    holiday shopping with sets and deals for
+                    <a href="#">LEGO® Insiders Weekend</a>,<a href="#"> Black Friday</a> and <a href="#">Cyber
+                        Monday</a>. We make it easy to shop for toys that will provide
+                    hours of fun and imaginative play. You'll also find curated <a href="#">LEGO® sets for adults</a>
+                    perfect for their
+                    interests, such as <a href="#">vehicles</a>, <a href="#">art and design</a>, <a href="#">gaming</a>
+                    and much more!
+                </p>
+            </div>
+        </div></div>
+    <div class="footer d-flex justify-content-center row">
+        <div class="inner-footer d-flex justify-content-between">
+            <div class="list-group footer-menu">
+                <li class="list-group-item footer-menu-items py-1"><img
+                        src="https://assets.lego.com/logos/v4.5.0/brand-lego.svg" alt="..."></li>
+                <li class="list-group-item footer-menu-items position-relative">
+                    <!-- Button trigger modal -->
+                    <button type="button" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i><span>United States</span>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade modal-toggle" id="exampleModal" tabindex="-1"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl row mx-auto">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <div class="close" data-dismiss="modal" aria-label="Close"
+                                         style="cursor: pointer;">
+                                        <span aria-hidden="true">&times;</span>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Gift Cards</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Find inspiration</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO Catalogs</a>
+                <a class="list-group-item list-group-item-action footer-menu-items">Find a LEGO Store</a>
+            </div>
+            <div class="list-group footer-menu">
+                <li class="list-group-item footer-menu-items">ABOUT US</li>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">About the LEGO
+                    Group</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO® News</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Sustainability</a>
+                <a class="list-group-item list-group-item-action footer-menu-items">Supply Chain Transparency
+                    Statement</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO Product
+                    Certification</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO Jobs</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO Compliance
+                    Line</a>
+            </div>
+            <div class="list-group footer-menu">
+                <li class="list-group-item footer-menu-items">SUPPORT</li>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Contact Us</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Find Building
+                    Instructions</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Replacement Parts</a>
+                <a class="list-group-item list-group-item-action footer-menu-items">Shipping and Returns</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Payment Methods</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Terms & Conditions</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Product Recalls</a>
+            </div>
+            <div class="list-group footer-menu">
+                <li class="list-group-item footer-menu-items">ATTRACTIONS</li>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO® House</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGOLAND® Parks</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGOLAND Discovery
+                    Centers</a>
+            </div>
+            <div class="list-group footer-menu">
+                <li class="list-group-item footer-menu-items">MORE FROM US</li>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO® LIFE</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO Education</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO Ideas</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO Foundation</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Affiliate Program</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Student Offers</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">Parent Offers</a>
+                <a href="#" class="list-group-item list-group-item-action footer-menu-items">LEGO® Braille
+                    Bricks</a>
+            </div>
+        </div>
+        <div class="footer-navbar d-flex justify-content-between">
+            <ul class="list-group">
+                <li class="list-group-item footer-menu-items">SUBSCRIBE TO LEGO® SHOP EMAILS</li>
+                <li class="list-group-item footer-menu-items">
+                    <div class="input-group">
+                        <input type="email" placeholder="Your email address" autocomplete="on"
+                               aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                        <div class="input-group-prepend">
+                            <button type="submit" id="button-addon1"><i class="fa-solid fa-chevron-right"
+                                                                        style="color: #000000;"></i></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item footer-menu-items">FOLLOW US</li>
+                <li class="list-group-item footer-menu-items">
+                    <ul class="list-group-horizontal list-group d-flex justify-content-between">
+                        <a href="https://www.facebook.com/LEGO/" class="list-group-item link-icon"><i
+                                class="fa-brands fa-facebook-f fa-lg" style="color: #ffffff;"></i></a>
+                        <a href="https://twitter.com/LEGO_Group" class="list-group-item link-icon"><i
+                                class="fa-brands fa-x-twitter fa-lg" style="color: #ffffff;"></i></a>
+                        <a href="https://www.instagram.com/lego" class="list-group-item link-icon"><i
+                                class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i></a>
+                        <a href="https://www.youtube.com/user/LEGO?app=desktop" class="list-group-item link-icon"><i
+                                class="fa-brands fa-youtube fa-lg"></i></a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-footer row">
+            <div class="inner-footer-footer">
+                <div class="footer-nav-bar">
+                    <ul class="list-group list-group-horizontal footer-inner-nav-bar">
+                        <a href="#" class="list-group-item">Privacy Policy</a>
+                        <a href="#" class="list-group-item">Cookies</a>
+                        <a href="#" class="list-group-item">Legal Notice</a>
+                        <a href="#" class="list-group-item">Terms of Use</a>
+                        <a href="#" class="list-group-item">Digital Wellbeing</a>
+                        <a href="#" class="list-group-item">Accessibility</a>
+                        <a href="#" class="list-group-item">Cookie Settings</a>
+                        <a href="#" class="list-group-item">Privacy Settings for residents of CA, VA, CT, UT and
+                            CO</a>
+                    </ul>
+                </div>
+                <div class="footer-description">
+                    <div class="inner-footer-description">
+                        <p>LEGO System A/S, DK-7190 Billund, Denmark. Must be 18
+                            years or older to purchase online. LEGO and the LEGO logo are trademarks of the LEGO
+                            Group.
+                            ©2024 The LEGO Group. All rights reserved. Use of this site signifies your agreement to
+                            the
+                            terms of use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

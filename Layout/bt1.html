@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        margin: unset;
+        font-size: x-large;
+    }
+
+    .portion {
+        border: 1px solid black;
+        width: 100%;
+        margin: 0px 0px 5px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    #sidebar {
+        border: 1px solid black;
+        width: 75%;
+    }
+
+    #body {
+        border: 1px solid black;
+        width: 24%
+    }
+   .nowrap {
+        border: none
+    }
+
+</style>
+<body>
+<div class="portion">Logo</div>
+<div class="portion">Navigation</div>
+<div class="portion">Header/Banner</div>
+<div class="portion nowrap">
+    <div id="sidebar">Side Bar</div>
+    <div id="body">Body Area</div>
+</div>
+<div class="portion">Footer</div>
+</body>
+</html>
