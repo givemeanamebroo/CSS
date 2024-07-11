@@ -8,7 +8,7 @@ console.log(thirdColor);
 
 // 2.Phân tách đối tượng person có hai thuộc tính là name và age vào các biến tương ứng.
 let person = {
-    name: "Kiên",
+    name: "NOname",
     age: 20
 };
 let {name, age} = person;
@@ -22,7 +22,7 @@ let newArr = [...arr1, ...arr2];
 console.log(newArr);
 
 // 4.Tạo một bản sao của mảng originalArray bằng cách sử dụng spread operator.
-let originalArray = ['Trai', 'dep', 'vo', 'cung', 'tan'];
+let originalArray = ['he', 'he', 'he', 'he', 'boy'];
 let copyArray = [...originalArray];
 console.log(copyArray);
 
@@ -35,7 +35,7 @@ console.log(newarr);
 let obj1 =
     {
         id: 1,
-        name: "kiên"
+        name: "NOname"
     };
 let obj2 =
     {
@@ -47,7 +47,7 @@ console.log(objnew);
 
 // 7.Cho một đối tượng person với các thuộc tính như name, age, và gender, viết một đoạn mã sử dụng Spread Operator để thêm một thuộc tính mới là country có giá trị là "Vietnam".
 let person2 = {
-    name: "Kiên",
+    name: "NOname",
     age: 20,
     gender: "nam"
 };
@@ -60,14 +60,14 @@ let newarr3 = arr3.filter(x => x % 2 === 0)
 console.log(newarr3);
 
 // 9.Sử dụng filter để lọc ra các chuỗi có độ dài lớn hơn một ngưỡng cho trước từ một mảng các chuỗi.
-let list = ['Trai', 'dep', 'vo', 'cung', 'tan'];
+let list = ['he', 'he', 'he', 'he', 'boy'];
 let newlist = list.filter(x => x.length > 3);
 console.log(newlist);
 
 // 10.Sử dụng filter để lọc ra các đối tượng từ một mảng các đối tượng dựa trên một điều kiện cho trước.
 let obj3 = [
     {
-        name: "Kiên",
+        name: "NOname",
         age: 21
     },
     {
@@ -103,7 +103,7 @@ let prime = arr4.filter(x => (primenumber(x))); // arr4.filter(primenumber)
 console.log(prime);
 
 // 12.Sử dụng filter để lọc ra các chuỗi không chứa ký tự số từ một mảng các chuỗi.
-let list2 = ['Trai', 'dep', 'vo1', 'cung22', 'tan333'];
+let list2 = ['he', 'he', 'he1', 'he22', 'boy333'];
 let blocknumber = str => {
     return str.match(/\d/) != null;     //let blockNumber = str => /\d/.test(str);  ***
 };
